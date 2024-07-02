@@ -1,0 +1,153 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-image: url(Images/wp-liquor-store-wallpapers.jpg);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  
+
+}
+
+/* Landing page styles */
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  backdrop-filter: blur(5px);
+}
+
+.glassmorphic-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+  max-width: 90%;
+  max-height: 90vh; /* Set a max height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glassmorphic-container h1 {
+  color: #fff;
+  font-size: 2.5em; /* Adjust font size */
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.glowing-text {
+  background: linear-gradient(90deg, #ff0000, #ffcc00, #00ff00, #00ffff, #1100ff, #e100ff, #ff0000);
+  background-size: 400% 400%;
+  color: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientAnimation 8s ease infinite;
+  -webkit-text-fill-color: transparent;
+  font-size: 3em;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.705);
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+.glassmorphic-container p {
+  color: #ddd;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.neon-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .glassmorphic-container h1 {
+      font-size: 2em;
+  }
+  .glowing-text {
+      font-size: 1.2em;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .glassmorphic-container h1 {
+      font-size: 2.5em;
+  }
+  .glowing-text {
+      font-size: 1.5em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .glassmorphic-container {
+      padding: 30px;
+      max-width: 80%; /* Adjust max width */
+  }
+  .glassmorphic-container h1 {
+      font-size: 3em;
+  }
+  .glowing-text {
+      font-size: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .glassmorphic-container {
+      padding: 40px;
+      max-width: 70%; /* Adjust max width */
+  }
+  .glassmorphic-container h1 {
+      font-size: 3.5em;
+  }
+  .glowing-text {
+      font-size: 2.5em;
+  }
+}
